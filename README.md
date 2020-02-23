@@ -1,9 +1,18 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # The React-API app. 
+Using componentDidMount to fetch data from the API and readed out in json format. 
 
-### The mean idea is to fetch the API and convert in Json file. 
-
+###Example: 
+ componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(res => res.json())
+      .then(json => {
+        this.setState({
+          isLoaded: true,
+          items: json,
+        })
+      });
 
 ## Available Scripts
 
